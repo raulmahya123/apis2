@@ -6,6 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class GuidanceComment extends Model
 {
+    protected $table = 'guidance_comments';
+
     protected $fillable = [
         'guidance_request_id',
         'user_id',

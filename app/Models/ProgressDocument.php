@@ -6,6 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class ProgressDocument extends Model
 {
+    protected $table = 'progress_documents';
+
     protected $fillable = [
         'research_progress_id',
         'file_path',

@@ -6,6 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class ResearchProgress extends Model
 {
+    protected $table = 'research_progresses';
+
     protected $fillable = [
         'research_proposal_id',
         'mahasiswa_id',

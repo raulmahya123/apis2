@@ -6,6 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class GuidanceDocument extends Model
 {
+    protected $table = 'guidance_documents';
+
     protected $fillable = [
         'guidance_request_id',
         'uploader_id',

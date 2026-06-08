@@ -6,6 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class DocumentVersion extends Model
 {
+    protected $table = 'document_versions';
+
     protected $fillable = [
         'documentable_type',
         'documentable_id',

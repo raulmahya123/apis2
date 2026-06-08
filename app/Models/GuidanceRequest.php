@@ -6,6 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class GuidanceRequest extends Model
 {
+    protected $table = 'guidance_requests';
+
     protected $fillable = [
         'research_proposal_id',
         'mahasiswa_id',
