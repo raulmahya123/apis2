@@ -3,6 +3,7 @@
 use App\Http\Controllers\Api\AuthController;
 use App\Http\Controllers\Api\DashboardController;
 use App\Http\Controllers\Api\DocumentController;
+use App\Http\Controllers\Api\FileController;
 use App\Http\Controllers\Api\GuidanceController;
 use App\Http\Controllers\Api\NotificationController;
 use App\Http\Controllers\Api\ProgressController;
@@ -77,6 +78,9 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::post('/notifications/{notification}/read', [NotificationController::class, 'markAsRead']);
     Route::post('/notifications/read-all', [NotificationController::class, 'markAllAsRead']);
     Route::delete('/notifications/{notification}', [NotificationController::class, 'destroy']);
+
+    // Files
+    Route::get('/files/{path}', [FileController::class, 'show'])->where('path', '.*');
 
     // Dashboard
     Route::get('/dashboard', [DashboardController::class, 'index']);

@@ -11,7 +11,7 @@ class ProgressDocumentResource extends JsonResource
     {
         return [
             'id' => $this->id,
-            'file_url' => url("storage/{$this->file_path}"),
+            'file_url' => url("api/files/{$this->file_path}"),
             'original_name' => $this->original_name,
             'file_size' => $this->file_size,
             'file_type' => $this->file_type,

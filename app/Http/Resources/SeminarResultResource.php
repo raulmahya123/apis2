@@ -15,7 +15,7 @@ class SeminarResultResource extends JsonResource
             'nilai' => $this->nilai,
             'catatan' => $this->catatan,
             'keputusan' => $this->keputusan,
-            'file_berita_acara' => $this->file_berita_acara ? url("storage/{$this->file_berita_acara}") : null,
+            'file_berita_acara' => $this->file_berita_acara ? url("api/files/{$this->file_berita_acara}") : null,
             'created_at' => $this->created_at,
         ];
     }

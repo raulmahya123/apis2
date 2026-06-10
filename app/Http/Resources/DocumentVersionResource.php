@@ -12,7 +12,7 @@ class DocumentVersionResource extends JsonResource
         return [
             'id' => $this->id,
             'uploader' => new UserResource($this->whenLoaded('uploader')),
-            'file_url' => url("storage/{$this->file_path}"),
+            'file_url' => url("api/files/{$this->file_path}"),
             'original_name' => $this->original_name,
             'version_number' => $this->version_number,
             'file_size' => $this->file_size,

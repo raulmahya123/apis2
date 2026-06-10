@@ -17,7 +17,7 @@ class SeminarResource extends JsonResource
             'status' => $this->status,
             'judul' => $this->judul,
             'deskripsi' => $this->deskripsi,
-            'file_url' => $this->file_path ? url("storage/{$this->file_path}") : null,
+            'file_url' => $this->file_path ? url("api/files/{$this->file_path}") : null,
             'syarat_valid' => $this->syarat_valid,
             'tanggal_pengajuan' => $this->tanggal_pengajuan,
             'tanggal_seminar' => $this->tanggal_seminar,

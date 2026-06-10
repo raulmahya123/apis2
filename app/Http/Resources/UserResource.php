@@ -18,7 +18,7 @@ class UserResource extends JsonResource
             'jurusan' => $this->jurusan,
             'angkatan' => $this->angkatan,
             'no_telepon' => $this->no_telepon,
-            'avatar' => $this->avatar ? url("storage/{$this->avatar}") : null,
+            'avatar' => $this->avatar ? url("api/files/{$this->avatar}") : null,
             'created_at' => $this->created_at,
         ];
     }

@@ -15,7 +15,7 @@ class ResearchProposalResource extends JsonResource
             'judul' => $this->judul,
             'abstrak' => $this->abstrak,
             'topik' => $this->topik,
-            'file_url' => $this->file_path ? url("storage/{$this->file_path}") : null,
+            'file_url' => $this->file_path ? url("api/files/{$this->file_path}") : null,
             'status' => $this->status,
             'catatan_review' => $this->catatan_review,
             'reviewer' => new UserResource($this->whenLoaded('reviewer')),
