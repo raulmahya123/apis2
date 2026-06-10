@@ -19,7 +19,7 @@ class ResearchProgress extends Model
 
     public function proposal()
     {
-        return $this->belongsTo(ResearchProposal::class);
+        return $this->belongsTo(ResearchProposal::class, 'research_proposal_id');
     }
 
     public function mahasiswa()
